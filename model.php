@@ -160,16 +160,16 @@ $categorie= array ();
 	$categorien[4]=$categorie;
 	
 $rel_cat_art= array ();
-$rel=array ()	;
-		$rel["artikel"]=1;
-		$rel["categorie"]=2;
-		$rel_cat_art[]=$rel;
-	
-$rel=array ()	;
-		$rel["artikel"]=1;
-		$rel["categorie"]=3;
-		$rel_cat_art[]=$rel;
-		
+// functie staat in app.php, functie gebruikt eerst het categorie id, dan het artikel id. Cat 1=php 2=html 3=css 4=git
+	$rel_cat_art[]= relatie(2, 2); 
+	$rel_cat_art[]= relatie(2, 1); 
+	$rel_cat_art[]= relatie(2, 3); 
+	$rel_cat_art[]= relatie(2, 4); 
+	$rel_cat_art[]= relatie(1, 5); 
+	$rel_cat_art[]= relatie(1, 6); 
+	$rel_cat_art[]= relatie(1, 7); 
+	$rel_cat_art[]= relatie(1, 8); 
+	$rel_cat_art[]= relatie(1, 9); 
 	
 	
 unset($artikel);
