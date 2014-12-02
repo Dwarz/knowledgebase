@@ -5,7 +5,7 @@
 		<link rel="stylesheet" href="main.css">
 	</head>
 	<body>
-		<h1><?php echo $artikel["head"]; ?></h1>
+		<h1><?php echo $artikel["title"]; ?></h1>
 		
 		<h2>
 			<?php foreach($catlist as $item ) {

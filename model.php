@@ -3,7 +3,7 @@ $artikelen= array ();
 $artikel= array ();
 	$artikel["title"]="table";
 	$artikel["id"]=1;
-	$artikel["head"]="table";
+	//$artikel["head"]="table";
 	$artikel["example"]="
 		<div class=\"example\">
 <pre>
@@ -64,7 +64,7 @@ $artikelen[1]=$artikel;
 $artikel= array ();
 	$artikel["title"] ="style";
 	$artikel["id"]=2;	
-	$artikel["head"] ="style";
+	//$artikel["head"] ="style";
 	$artikel["content"] ="<p>De <style> en </style> tags in de head passen de css rechtstreeks in de html aan. Het is beter dit te vermijden en een cssdocument aan te maken om vanuit de html daarheen te verwijzen.</p>
 
 			<p>Je kunt de style ook als tag in een div gebruiken, wat echter ook afgeraden wordt. Het ziet er dan zo uit:</p>
@@ -78,7 +78,7 @@ $artikelen[2]=$artikel;
 $artikel= array ();
 	$artikel["title"] = "ahref";
 	$artikel["id"]=3;
-	$artikel["head"] = "ahref";
+	//$artikel["head"] = "ahref";
 	$artikel["content"] = "<p>De a href gebruik je om links mee te maken. </p> 
 			<p>&lt;a href=\"url\"&gt;tekst&lt;/a&gt; toont de tekst, als je erop klikt ga je naar de url.<br />
 			in plaats van een url kan je er echter ook andere links insteken, zoals bestanden op je computer.</p>";
@@ -87,14 +87,14 @@ $artikel= array ();
 $artikel= array ();
 	$artikel["title"] = "body";
 	$artikel["id"]=4;
-	$artikel["head"] = "body";
+	//$artikel["head"] = "body";
 	$artikel["content"] = "<p>Tussen de <body> en </body> tags zet je de inhoud van de pagina. Iedere pagina heeft deze tags, ze komen direct na de </head> tag en voor de </html> tag.</p>";
 	$artikelen[4]=$artikel;
 	
 $artikel= array ()	;
 	$artikel["title"] = "array";
 	$artikel["id"]=5;
-	$artikel["head"]= "array";
+	//$artikel["head"]= "array";
 	$artikel["content"]= '<p>Een array is een soort variabele waar je niet 1, maar meerdere dingen (values) in kunt opslaan. Je kunt iedere value een key(woord) geven om ze makkelijker op te zoeken, als je de key leeg laat maakt hij er uit zichzelf het laagste niet gebruikte getal van. </p>
 	
 	<p>een deel van de opmaak van dit array ziet er bijvoorbeeld zo uit: <br />
@@ -110,16 +110,29 @@ $artikelen[5]=$artikel;
 $artikel= array ();
 	$artikel["title"] = "isset";
 	$artikel["id"]=6;
-	$artikel["head"] = "isset";
+	//$artikel["head"] = "isset";
 	$artikel["content"] = '<p>Met isset kan je controleren of een variabele al bestaat. Je typt dan isset($variabele) en krijgt dan als antwoord true or false.</p>';
 	$artikelen[6]=$artikel;
 
 	$artikel= array ();
 	$artikel["title"] = '$_GET';
 	$artikel["id"]=7;
-	$artikel["head"] = '$_GET';
+	//$artikel["head"] = '$_GET';
 	$artikel["content"] = '<p>De $_GET["iets"] haalt informatie uit de url, zo kan je met $_GET["id"] controleren of iemand http://website.nl/index.php?id=bla heeft ingevuld, in het geval van het voorbeeld krijg je bla terug als antwoord</p>';
 	$artikelen[7]=$artikel;
+	
+$artikel= array ();
+	$artikel["title"]= "undefined index";
+	$artikel["id"]=8;
+	//$artikel["head"]= "undefined index";
+	$artikel["content"] = 'De key van een array wordt niet gevonden. De key is $variabele["key"]'; //deze hoort bij php
+	$artikelen[8]=$artikel;
+	
+$artikel=array();
+	$artikel["title"]="foreach";
+	$artikel["id"]=9;
+	$artikel["content"]='loopt door een lijst (bijv array) "foreach($variabele as $kopie ) { }" hierbij wordt $variabele naar $kopie gekopieerd (le duh). Tussen de {} gebruik je $kopie, $variabele heb je daarbinnen niet nodig';
+	$artikelen[9]=$artikel;
 	
 $categorien= array ();
 $categorie= array ();
@@ -159,7 +172,8 @@ $rel=array ()	;
 		
 	
 	
-	
+unset($artikel);
+unset($categorie);
 	
 	
 	
