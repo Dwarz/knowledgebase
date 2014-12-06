@@ -88,7 +88,7 @@ $artikel= array ();
 	$artikel["title"] = "body";
 	$artikel["id"]=4;
 	//$artikel["head"] = "body";
-	$artikel["content"] = "<p>Tussen de <body> en </body> tags zet je de inhoud van de pagina. Iedere pagina heeft deze tags, ze komen direct na de </head> tag en voor de </html> tag.</p>";
+	$artikel["content"] = "<p>Tussen de &lt;body&gt; en &lt;/body&gt; tags zet je de inhoud van de pagina. Iedere pagina heeft deze tags, ze komen direct na de &lt;/head&gt; tag en voor de &lt;/html&gt; tag.</p>";
 	$artikelen[4]=$artikel;
 	
 $artikel= array ()	;
@@ -135,7 +135,7 @@ $artikel=array();
 	$artikelen[9]=$artikel;
 	
 $artikel=array();
-	$artikel["title"]=Tag;
+	$artikel["title"]="Tag";
 	$artikel["id"]=10;
 	$artikel["content"]="<p>Je kunt in je cssdocument ook de info voor alle tags van een bepaald type aanpassen.<br />
 	De tag defineer je in het cssdocument dan bijvoorbeeld:</p>
