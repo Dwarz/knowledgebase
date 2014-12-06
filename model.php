@@ -134,6 +134,23 @@ $artikel=array();
 	$artikel["content"]='loopt door een lijst (bijv array) "foreach($variabele as $kopie ) { }" hierbij wordt $variabele naar $kopie gekopieerd (le duh). Tussen de {} gebruik je $kopie, $variabele heb je daarbinnen niet nodig';
 	$artikelen[9]=$artikel;
 	
+$artikel=array();
+	$artikel["title"]=Tag;
+	$artikel["id"]=10;
+	$artikel["content"]="<p>Je kunt in je cssdocument ook de info voor alle tags van een bepaald type aanpassen.<br />
+	De tag defineer je in het cssdocument dan bijvoorbeeld:</p>
+
+<pre>h2 {
+	font-size: 18px;
+	}
+</pre>
+		
+	<p>In je html hoef je dan enkel de tag zelf ( &lt;h2&gt; in dit geval) maar te gebruiken en hoef je dan niet te verwijzen naar andere stijlinformatie.</p>
+	
+	<p>De tag is de vierde in de volgorde waarop stijlinformatie wordt toegepast en komt na de style, id en class.
+	Wanneer er iets niet in de tag staat wordt er enkel nog gekeken naar de parent.</p>";
+	$artikelen[10]=$artikel;
+	
 $categorien= array ();
 $categorie= array ();
 	$categorie["name"]="php";
@@ -170,6 +187,7 @@ $rel_cat_art= array ();
 	$rel_cat_art[]= relatie(1, 7); 
 	$rel_cat_art[]= relatie(1, 8); 
 	$rel_cat_art[]= relatie(1, 9); 
+	$rel_cat_art[]= relatie(2, 10); 
 	
 	
 unset($artikel);
