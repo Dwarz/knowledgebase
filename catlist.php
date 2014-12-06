@@ -25,9 +25,17 @@ if (isset($search)){ //hiermee checkt hij of $search bestaat, wat betekent dat e
 		}
 }
 
-
 $cats = array(); // array cats aanmaken
-foreach($categorien as $categorie ) {  //er wordt door alle categorieen heengelopen en die worden naar categorie gekopieerd
+$gekozen_categorien = array () ;
+if ( !isset($_POST["dropdown"]) or  $_POST["dropdown"]=="alles" ) { //door de ! bij de isset wordt de if hoe dan ook uitgevoerd als je via de adresbalk op de site kwam (zonder de zoekfunctie te gebruiken dus). Als dat niet van toepassing is gaat hij verder bij or en wordt gecontroleerd of "alles" in de dropdown staat
+	$gekozen_categorien=$categorien; //alle categorieen worden nu in gekozen_categorien gezet, want of "alles" is aangeklikt, of je komt net op de site
+}
+else {
+	$gekozen_categorie=$_POST["dropdown"];
+	$gekozen_categorien[] = $categorien[$gekozen_categorie];
+}
+	
+foreach($gekozen_categorien as $categorie ) {  //er wordt door de gekozen categorieen heengelopen en die worden naar categorie gekopieerd
 $categorie["artikelen"]= array() ;
 	foreach($rel_cat_art as $relatie) { // er wordt door alle rel_cat_art heengelopen en die worden naar relatie gekopieerd
 		if( $relatie["categorie"] == $categorie["id"] ){  // als het nummer van een van de relaties gelijk is aan het gevraagde id wordt het volgende uitgevoerd
