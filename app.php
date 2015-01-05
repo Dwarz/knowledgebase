@@ -10,6 +10,17 @@ function relatie ($catid , $artid ) { // functie aanmaken die het categorie id e
 	$rel["categorie"]= $catid;	// categorie id opslaan
 	return $rel;			// de gehele array returnen (wordt gebruikt in model)
 }
+
+function tijdcalculator ( $tijd )	{
+	//huidige tijdstip , wat we binnenkrijgen omzetten naar rekenbare zut , aftrekken , terugsturen
+	$now = new DateTime ;
+	$tijd = DateTime::createFromFormat (  "d-m-Y H:i" ,  $tijd );
 	
+	$tijdverschil= $now->diff($tijd); //dit doet tijd $now - $tijd
 	
-?>
+	return $tijdverschil->days . " dagen";
+	
+}
+	
+
+	?> 

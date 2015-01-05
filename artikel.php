@@ -21,5 +21,7 @@ foreach($rel_cat_art as $item ) { // er wordt door alle relaties tussen artikele
 	}
 }
 
+$lastedit= tijdcalculator($artikel["lastedit"]) ;
+
 require( "template.php" );
 ?>

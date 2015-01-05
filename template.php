@@ -13,6 +13,10 @@
 			} ?>
 		</h2>
 		
+		<h3>
+			Laatst gewijzigd: <?php echo $lastedit ;?>
+		</h3>
+		
 		
 		<div class="content">
 			<?php echo $artikel["content"]; ?>
