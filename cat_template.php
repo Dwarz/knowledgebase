@@ -9,10 +9,10 @@
 		<form action="catlist.php" method="post">
 			<select name="dropdown">
 				<option value="alles">Alle categorien</option>
-				<option value="1">PHP</option>
-				<option value="2">HTML</option>
-				<option value="3">CSS</option>
-				<option value="4">GIT</option>
+				<?php foreach( $categorien as $categorie ) {?>
+					<option value="<?php echo $categorie["id"];?>"> <?php echo $categorie["name"];?> </option> <!-- dit gaat door alle categorieen heen en plaatst ze in de dropdownbox -->
+				<?php } ?>
+				
 			</select>
 			<input name="zoekfunctie" value="<?php echo $zoekopdracht ;?>" />  <!-- dit is een htmlcomment :D Dit staat in de sourcecode want het is html. En input moet in een form staan-->
 		</form>
